@@ -11,7 +11,7 @@
         padding-left: 60px;
     }
     @include small {
-        min-height: 1890px;
+        // min-height: 1890px;
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -58,14 +58,9 @@
 
 
 // 間隔調整
-// .view-btn {
-//     @include small {
-//         margin-bottom: 40px;
-//     }
-// }
+.view-btn {
+    @include small {
+        margin-bottom: 120px;
+    }
+}
 
-// .bottom-work {
-//     @include small {
-//         margin-top: 40px;
-//     }
-// }
