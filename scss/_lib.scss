@@ -1,0 +1,167 @@
+// 変数 //
+
+$fontJp: 'Noto Serif JP'; 
+$fontEng: 'Noto Serif';
+$black: #282F35;
+$fontColorBlack: #171717;
+
+// レスポンシブ
+
+@mixin large { @media screen and (min-width: 1300px) { @content } };
+
+@mixin medium { @media screen and (max-width: 1299px) and (min-width: 901px) { 
+    @content } 
+};
+
+@mixin sm { @media screen and (max-width:900px) and (min-width:600px) {
+    @content }
+};
+
+@mixin small { @media screen and (max-width: 599px) and (min-width: 320px) { @content } };
+
+// 共通 //
+body {
+    font-size: 1.6rem;
+    letter-spacing: .05em;
+
+}
+
+html {
+    font-size: 62.5%
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+// ハンバーガーメニュー表示時、背景固定
+.scroll-prevent {
+    position: fixed;
+}
+
+
+// sectionスタイル
+.section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    @include small {
+        padding-bottom: 40px;
+    }
+    // sectionタイトル
+    &__title {
+        // 横線表示
+        display: flex;
+        align-items: center;
+        //
+        font-size: 6rem;
+        font-family: $fontEng;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 80px;
+        @include sm {
+            font-size: 5rem;
+        }
+        @include small {
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+    }
+    // 横線
+    &__title::after {
+        content: "";
+        width: 200px;
+        border-top: 5px solid;
+        margin-left: 3rem;
+        @include sm {
+            width: 120px;
+        }
+        @include small {
+            width: 90px;
+        }
+    }
+}
+
+
+
+.section__title__left {
+    color: $black;
+}
+
+.section__title__right {
+    color: #fff;
+    float: right;
+}
+
+
+.bottom-title {
+    font-size: 9rem;
+    font-weight: bold;
+    font-family: $fontEng;
+    // line-height: 0.32;
+    margin-bottom: 70px;
+    @include sm {
+        font-size: 6rem;
+    }
+    @include small {
+        font-size: 4rem;
+    }
+    &__right {
+        color: $fontColorBlack;
+        opacity: 5%;
+        position: absolute;
+        margin-right: 120px;
+        right: 0;
+        bottom: 0;
+        @include sm {
+            margin-right: 60px;
+        }
+        @include small {
+            margin-right: 15px;
+        }
+    }
+    &__left {
+        color: #fff;
+        opacity: 16%;
+        position: absolute;
+        margin-left: 120px;
+        left: 0;
+        bottom: 0;
+        clear: right;
+        @include sm {
+            margin-left: 60px;
+        }
+        @include small {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+// ボタンのスタイル
+.btn {
+    text-align: center;
+    clear: right;
+}
+
+.link-btn {
+    display: inline-block;
+    width: 235px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: $fontEng;
+    color: $fontColorBlack;
+    background-color: #F7D43F;
+    border-radius: 30px;
+    box-shadow: 0 0 6px #1B1310;
+    transition: .3s;
+}
+
+.link-btn:hover {
+    opacity: .8;
+    transition: .3s;
+}

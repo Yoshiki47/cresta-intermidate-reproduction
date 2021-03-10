@@ -1,0 +1,71 @@
+.works {
+    padding-right: 120px;
+    padding-left: 120px;
+    // height: 100vh;
+    min-height: 1000px;
+    background-image: url(../img/works-bgi@2x.jpg);
+    background-size: cover;
+    @include sm {
+        min-height: 1100px;
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include small {
+        min-height: 1890px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &__content {
+        // width: 1000px;
+        padding: 0 100px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        // titleのfloatの回り込み解除
+        clear: right;
+        @include sm {
+            width: 500px;
+            margin: 0 auto;
+            margin-bottom: 80px;
+            padding: 0;
+        }
+        @include small {
+            padding: 0 10px;
+            flex-direction: column;
+        }
+    }
+    &__item {
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 1.6rem;
+            font-family: $fontJp;
+            line-height: 1.875;
+            letter-spacing: 3.125;
+            padding: 25px 20px;
+            background-color: #fff;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-right: 20px;
+        @include small {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+// 間隔調整
+// .view-btn {
+//     @include small {
+//         margin-bottom: 40px;
+//     }
+// }
+
+// .bottom-work {
+//     @include small {
+//         margin-top: 40px;
+//     }
+// }

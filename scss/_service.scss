@@ -1,0 +1,79 @@
+.service {
+    &__wrap {
+        height: 660px;
+        @include small {
+            height: 1230px;
+        }
+    }
+    &__title {
+        margin-left: 220px;
+        @include medium {
+            margin-left: 90px;
+        }
+        @include sm {
+            margin-left: 60px;
+        }
+        @include small {
+            margin-left: 15px;
+        }
+    }
+}
+
+.item1 {
+    background-image: url(../img/service-img01@2x.jpg);
+    @include small {
+        margin-bottom: 30px;
+    }
+}
+
+.item2 {
+    background-image: url(../img/service-img02@2x.jpg);
+    @include small {
+        margin-bottom: 30px;
+    }
+}
+
+.item3 {
+    background-image: url(../img/sevice-img03@2x.jpg);
+}
+
+
+.service__content {
+    display: flex;
+    margin-bottom: 70px;
+    @include small {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    &__item {
+        width: 33.3%;
+        position: relative;
+        @include small {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        a {
+            width: 100%;
+            display: block;
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: $fontEng;
+            font-style: italic;
+            line-height: 320px;
+            letter-spacing: 1.25;
+            color: #fff;
+            text-align: center;
+            transition: .3s;
+            @include small {
+                font-size: 2rem;
+            }
+        }
+        a:hover {
+            transition: .3s;
+            background-color: rgba(56, 83, 106, .7);
+        }
+    }
+}

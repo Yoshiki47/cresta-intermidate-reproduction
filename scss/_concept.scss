@@ -1,0 +1,74 @@
+.concept {
+    // height: 100vh;
+    padding-left: 210px;
+    padding-right: 130px;
+    @include medium {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    @include sm {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @include small {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__catchcopy {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: $fontJp;
+        color: $fontColorBlack;
+        text-align: center;
+        line-height: 1.67;
+        margin-bottom: 60px;
+        @include small {
+            font-size: 2rem;
+            padding: 0 30px;
+            margin-bottom: 30px;
+        }
+    }
+    &__content {
+        display: flex;
+        margin-bottom: 70px;
+        @include medium {
+            align-items: center;
+        }
+        @include sm {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        @include small {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 1.6rem;
+            font-weight: bold;
+            font-family: $fontJp;
+            color: $fontColorBlack;
+            line-height: 1.875;
+            margin-right: 120px;
+            @include medium {
+                margin-right: 60px;
+            }
+            @include sm {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            @include small {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+        img {
+            margin-right: 100px;
+            margin-bottom: 70px;
+            @include medium {
+                width: 440px;
+                height: 220px;
+            }
+        }
+    }
+}
+

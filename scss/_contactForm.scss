@@ -1,0 +1,78 @@
+.contactForm {
+    color: $fontColorBlack;
+    &__wrap {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        margin: 0 auto;
+        @include large {
+            width: 1000px;
+        }
+        @include medium {
+            width: 850px;
+        }
+        @include sm {
+            width: 590px;
+        }
+        @include small {
+            width: 92%;
+        }
+    }
+    &__content {
+        margin-bottom: 22px;
+        p {
+            margin-bottom: 5px;
+            @include small {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__info {
+        margin-bottom: 3px;
+    }
+    &__input {
+        width: 100%;
+        margin-bottom: 22px;
+    }
+}
+
+
+//お問い合わせ内容部分のスタイル
+form {
+    display: flex;
+    @include small {
+        flex-direction: column;
+    }
+}
+
+.gLabel1 {
+    width: 100px;
+    margin-right: 20px;
+    @include small {
+        margin-bottom: 5px;
+    }
+}
+
+.gLabel2 {
+    width: 220px;
+    margin-right: 20px;
+    @include small {
+        margin-bottom: 5px;
+    }
+}
+
+.gLabel3 {
+    width: 100px;
+}
+
+.cf-info__input {
+    margin-right: 10px;
+}
+
+
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 80px;
+}

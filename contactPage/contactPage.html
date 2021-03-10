@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリスタ中級コンタクトページ</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/contactPage.css">
+</head>
+<body>
+    <header class="cp-hd js-hd">
+        <h1 class="cp-hd__logo">Cresta Design</h1>
+        <nav class="cp-hd__nav">
+            <ul>
+                <li><a href="../index.html#concept">Concept</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="../index.html#works">Works</a></li>
+            </ul>
+        </nav>
+
+        <!--ハンバーガーメニュー-->
+        <div class="cp-ham" id="cp-ham">
+            <span class="cp-ham__line" id="top-span"></span>
+            <span class="cp-ham__line" id="center-span"></span>
+            <span class="cp-ham__line" id="bottom-span"></span>
+        </div>
+        
+        <nav class="cp-ham-menu" id="cp-ham-menu">
+            <ul>
+                <li><a href="../index.html#concept">Concept</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="../index.html#works">Works</a></li>
+            </ul>
+        </nav>
+        <!--/ハンバーガーメニュー-->
+    </header>
+    <main>
+        <div class="cp-fv">
+            <h2 class="cp-hd-catchcopy">Contact</h2>
+            <p class="cp-bottom-title">Contact us</p>
+        </div>
+        <section class="contactForm">
+            <div class="contactForm__wrap">
+                <div class="contactForm__content">
+                    <p>お問い合わせ内容</p>
+                    <form action="" method="POST">
+                        <span class="gLabel1"><label for="checkbox"><input class="cf-info__input" type="checkbox">資料請求</label></span>
+                        <span class="gLabel2"><label for="checkbox"><input class="cf-info__input" type="checkbox">お電話でのご相談を希望</label></span>
+                        <span class="gLabel3"><label for="checkbox"><input class="cf-info__input" type="checkbox">申し込み</label></span>
+                    </form>
+                </div>
+                <div class="contactForm__name">
+                    <p class="contactForm__info">担当者名</p>
+                    <input class="contactForm__input" type="text">
+                </div>
+                <div class="contactForm__phoneNumber">
+                    <p class="contactForm__info">電話番号</p>
+                    <input class="contactForm__input" type="text">
+                </div>
+                <div class="contactForm__mail">
+                    <p class="contactForm__info">メールアドレス</p>
+                    <input class="contactForm__input" type="text">
+                </div>
+                <div class="contactForm__other">
+                    <p class="contactForm__info">その他</p>
+                    <textarea name="body" id="" cols="30" rows="10"></textarea>
+                </div>
+                <p class="cp-btn"><a class="submit-btn" id="submit" type="submit">Submit</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="cp-footer">
+        <small class="cp-small">&copy;cresta.design all rights reserved</small>
+    </footer>
+
+    <script src="./js/contactPage.js"></script>
+</body>
+</html>

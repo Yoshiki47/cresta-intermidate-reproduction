@@ -1,0 +1,48 @@
+.cp-fv {
+    // height: 100vh;
+    min-height: 450px;
+    background-image: url(../img/contact-page-bgi@2x.jpg);
+    background-size: cover;
+    position: relative;
+    @include small {
+        background-position: center;
+    }
+}
+
+.cp-hd-catchcopy {
+    font-size: 6rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: $fontEng;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include sm {
+        font-size: 4rem;
+    }
+    @include small {
+        font-size: 3rem;
+    }
+}
+
+.cp-bottom-title {
+    font-size: 9rem;
+    font-weight: bold;
+    font-family: $fontEng;
+    color: #fff;
+    opacity: 16%;
+    margin-left: 48px;
+    margin-bottom: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include sm {
+        font-size: 6rem;
+    }
+    @include small {
+        font-size: 4rem;
+        margin-left: 15px;
+    }
+}

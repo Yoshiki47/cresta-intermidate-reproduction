@@ -1,0 +1,466 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:visited {
+  color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=reset.css.map */
+body {
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.scroll-prevent {
+  position: fixed;
+}
+
+.cp-btn {
+  text-align: center;
+}
+
+.submit-btn {
+  display: inline-block;
+  width: 235px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Noto Serif";
+  color: #171717;
+  background-color: #F7D43F;
+  border-radius: 30px;
+  box-shadow: 0 0 6px #1B1310;
+  transition: .3s;
+}
+.submit-btn:hover {
+  opacity: .8;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.cp-hd {
+  z-index: 10;
+  width: 100%;
+  padding: 40px 120px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .cp-hd {
+    padding: 30px 60px;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-hd {
+    padding: 30px 15px;
+  }
+}
+.cp-hd__logo {
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Noto Serif";
+}
+
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-hd__nav {
+    display: none;
+  }
+}
+.cp-hd__nav ul {
+  display: flex;
+}
+.cp-hd__nav li {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #fff;
+  font-family: "Noto Serif";
+}
+.cp-hd__nav li:not(:last-child) {
+  margin-right: 30px;
+}
+.cp-hd__nav li:hover {
+  text-decoration: underline;
+}
+
+.cp-ham {
+  z-index: 20;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-ham {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.cp-ham__line {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: 1s;
+}
+.cp-ham__line:nth-child(1) {
+  top: 0;
+}
+.cp-ham__line:nth-child(2) {
+  top: 8px;
+}
+.cp-ham__line:nth-child(1) {
+  bottom: 0;
+}
+
+.cp-ham-menu {
+  display: none;
+  z-index: 10;
+  background-color: #282F35;
+}
+.cp-ham-menu li {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Noto Serif";
+}
+.cp-ham-menu li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.cp-ham-menu li:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-ham-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+  }
+}
+
+.in {
+  transform: translateX(100%);
+}
+
+.ham-fixed {
+  position: fixed;
+  right: 15px;
+}
+
+.active1, .active2, .active3 {
+  background-color: white;
+}
+
+.active1 {
+  transform: translateY(7px) rotate(-45deg);
+  top: 0;
+}
+
+.active2 {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.active3 {
+  transform: translateY(-10px) rotate(45deg);
+  bottom: 0;
+}
+
+.headerScroll {
+  background-color: #282F35;
+  transition: color 0.2s ease-out;
+}
+
+.cp-fv {
+  min-height: 450px;
+  background-image: url(../img/contact-page-bgi@2x.jpg);
+  background-size: cover;
+  position: relative;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-fv {
+    background-position: center;
+  }
+}
+
+.cp-hd-catchcopy {
+  font-size: 6rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Noto Serif";
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .cp-hd-catchcopy {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-hd-catchcopy {
+    font-size: 3rem;
+  }
+}
+
+.cp-bottom-title {
+  font-size: 9rem;
+  font-weight: bold;
+  font-family: "Noto Serif";
+  color: #fff;
+  opacity: 16%;
+  margin-left: 48px;
+  margin-bottom: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .cp-bottom-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .cp-bottom-title {
+    font-size: 4rem;
+    margin-left: 15px;
+  }
+}
+
+.contactForm {
+  color: #171717;
+}
+.contactForm__wrap {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1300px) {
+  .contactForm__wrap {
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1299px) and (min-width: 901px) {
+  .contactForm__wrap {
+    width: 850px;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .contactForm__wrap {
+    width: 590px;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .contactForm__wrap {
+    width: 92%;
+  }
+}
+.contactForm__content {
+  margin-bottom: 22px;
+}
+.contactForm__content p {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .contactForm__content p {
+    margin-bottom: 15px;
+  }
+}
+.contactForm__info {
+  margin-bottom: 3px;
+}
+.contactForm__input {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+form {
+  display: flex;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  form {
+    flex-direction: column;
+  }
+}
+
+.gLabel1 {
+  width: 100px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .gLabel1 {
+    margin-bottom: 5px;
+  }
+}
+
+.gLabel2 {
+  width: 220px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 599px) and (min-width: 320px) {
+  .gLabel2 {
+    margin-bottom: 5px;
+  }
+}
+
+.gLabel3 {
+  width: 100px;
+}
+
+.cf-info__input {
+  margin-right: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 80px;
+}
+
+.cp-footer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cp-small {
+  font-size: 1.4rem;
+  font-family: "Noto Serif";
+  color: #282F35;
+}
+
+/*# sourceMappingURL=contactPage.css.map */

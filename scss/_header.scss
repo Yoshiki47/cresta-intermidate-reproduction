@@ -1,0 +1,148 @@
+.hd {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    padding: 20px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sm {
+        padding: 30px 35px;
+    }
+    @include small {
+        padding: 30px 15px;
+    }
+    &__logo {
+        font-size: 2.6rem;
+        font-family: $fontEng;
+        font-weight: bold;
+        font-style: italic;
+        color: #fff;
+    }
+}
+
+.hd__nav {
+    @include small {
+        display: none;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        font-size: 1.6rem;
+        font-style: italic;
+        color: #fff;
+        font-family: $fontEng;
+    }
+    li:not(:last-child) {
+        margin-right: 30px;
+    }
+    li:hover {
+        text-decoration: underline;
+    }
+}
+
+
+// ハンバーガーメニュー
+.ham {
+    z-index: 20;
+    display: none;
+    cursor: pointer;
+    @include small {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.ham-menu {
+    display: none;
+    z-index: 10;
+    background-color: $black;
+    li {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-style: italic;
+        font-family: $fontEng;
+    }
+    li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    @include small {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // メニューをスライド表示
+        transition: 1s;
+    }
+    li:hover {
+        text-decoration: underline;
+    }
+    &__line {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        // メニューボタンのアニメーション
+        transition: 1s;
+    }
+    &__line:nth-child(1) {
+        top: 0;
+    }
+    &__line:nth-child(2) {
+        top: 8px;
+    }
+    &__line:nth-child(1) {
+        bottom: 0;
+    }
+}
+
+
+// クリック時メニュー表示
+.in {
+    transform: translateX(100%);
+}
+
+
+// ボタンの位置
+.ham-fixed {
+    right: 0;
+}
+
+
+// ハンバーガーメニューボタンの動き
+.active1, .active2, .active3 {
+    background-color: white;
+}
+
+.active1 {
+    transform: translateY(7px) rotate(-45deg);
+    top: 0;
+}
+
+.active2 {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.active3 {
+    transform: translateY(-10px) rotate(45deg);
+    bottom: 0;
+}
+
+
+//fv過ぎたらheaderの背景色変更
+.headerScroll {
+    background-color: $black;
+    transition: color 0.2s ease-out;
+}
